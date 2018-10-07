@@ -10,12 +10,7 @@ import com.sedmelluq.discord.lavaplayer.tools.io.HttpClientTools;
 import com.sedmelluq.discord.lavaplayer.tools.io.HttpConfigurable;
 import com.sedmelluq.discord.lavaplayer.tools.io.HttpInterface;
 import com.sedmelluq.discord.lavaplayer.tools.io.HttpInterfaceManager;
-import com.sedmelluq.discord.lavaplayer.track.AudioItem;
-import com.sedmelluq.discord.lavaplayer.track.AudioPlaylist;
-import com.sedmelluq.discord.lavaplayer.track.AudioReference;
-import com.sedmelluq.discord.lavaplayer.track.AudioTrack;
-import com.sedmelluq.discord.lavaplayer.track.AudioTrackInfo;
-import com.sedmelluq.discord.lavaplayer.track.BasicAudioPlaylist;
+import com.sedmelluq.discord.lavaplayer.track.*;
 import org.apache.commons.io.IOUtils;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.config.RequestConfig;
@@ -45,9 +40,7 @@ import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 import static com.sedmelluq.discord.lavaplayer.tools.DataFormatTools.convertToMapLayout;
-import static com.sedmelluq.discord.lavaplayer.tools.FriendlyException.Severity.COMMON;
-import static com.sedmelluq.discord.lavaplayer.tools.FriendlyException.Severity.FAULT;
-import static com.sedmelluq.discord.lavaplayer.tools.FriendlyException.Severity.SUSPICIOUS;
+import static com.sedmelluq.discord.lavaplayer.tools.FriendlyException.Severity.*;
 
 /**
  * Audio source manager that implements finding Youtube videos or playlists based on an URL or ID.

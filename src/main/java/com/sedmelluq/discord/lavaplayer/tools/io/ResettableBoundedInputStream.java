@@ -3,7 +3,7 @@ package com.sedmelluq.discord.lavaplayer.tools.io;
 import java.io.IOException;
 import java.io.InputStream;
 
-import static org.apache.commons.io.IOUtils.EOF;
+//import static org.apache.commons.io.IOUtils.EOF;
 
 /**
  * Bounded input stream where the limit can be set dynamically.
@@ -49,7 +49,7 @@ public class ResettableBoundedInputStream extends InputStream {
   @Override
   public int read(byte[] buffer, int offset, int length) throws IOException {
     if (position >= limit) {
-      return EOF;
+      return -1;
     }
 
     int chunk = (int) Math.min(length, limit - position);
